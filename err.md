@@ -71,3 +71,19 @@ Hi @Alice Tong if you still need help on your project I can take a look now. Lis
 
 Alice Tong [5 days ago]
 Thanks, @Lisa [ABND] and @Iva.ProjectCoach [ABND]!  I will try DateFormat.  I will ask if I cannot figure out how to implement @Iva.ProjectCoach [ABND]!
+
+**
+
+Alice Tong [Oct 31st at 12:22 AM]
+Did anyone have the issue (for the News App, Part I) that sometimes the articles would load and sometimes they won't?  Sometimes even when I load the app, once I click an article to load webpage and then hit back to return the app it would display that it cannot find articles to load. I'm not sure why that's happening.
+
+
+2 replies
+Marc G. StudentGuide_ABND [5 days ago]
+Try adding this log statement in QueryUtils in your makeHttpRequest method at the bottom of the connection successful logic. Then copy the address from logcat and paste it in your browser to see if the result returns properly and looks correct. I heard of some possible api changes at the Guardian around Slack but don't know if its just rumor as my app is still working across all fields.       Log.i(LOG_TAG,
+                           "QueryUtils makeHttpRequest:" +
+                                   " SUCCESSFULLY CONNECTED JSON RESPONSE RETRIEVED from:"+ url); (edited)
+
+
+Jorge E. Covarrubias (ABND) [5 days ago]
+I had this happen. there was too many request with the key or something along those lines. I had the URL loaded on a browser and when it wouldn't load on the app, I would check on the browser and sure enough, there was a too many request error. I would continue with my lesson and try again in a little bit.
